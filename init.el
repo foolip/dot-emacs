@@ -121,3 +121,6 @@
       (goto-char (point-min))
       (while (re-search-forward "\\s-+" nil t)
         (replace-match " ")))))
+
+(let ((hostname (car (split-string system-name "\\."))))
+     (load (concat "~/.emacs.d/" hostname ".el")))
