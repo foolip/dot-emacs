@@ -34,8 +34,8 @@
   (if (fboundp 'recompile) (recompile) (compile)))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
-(add-to-list 'load-path "~/src/color-theme-sanityinc-tomorrow/")
-(add-to-list 'custom-theme-load-path "~/src/color-theme-sanityinc-tomorrow/")
+(add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
 (load-theme 'sanityinc-tomorrow-night t)
 
 ;; http://tuhdo.github.io/helm-intro.html
