@@ -28,6 +28,11 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
+;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Compilation.html
+(defun compile-or-recompile ()
+  (interactive)
+  (if (fboundp 'recompile) (recompile) (compile)))
+
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
 (add-to-list 'load-path "~/src/color-theme-sanityinc-tomorrow/")
 (add-to-list 'custom-theme-load-path "~/src/color-theme-sanityinc-tomorrow/")

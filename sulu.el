@@ -18,11 +18,6 @@
 (add-to-list 'default-frame-alist '(font . "Menlo-13"))
 (setq line-spacing 1)
 
-;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Compilation.html
-(global-set-key (kbd "s-r")
-                (lambda () (interactive)
-                  (if (fboundp 'recompile) (recompile) (compile))))
-
 (global-set-key (kbd "s-o") 'helm-projectile-find-file)
 (global-set-key (kbd "s-O") 'helm-projectile-find-file-in-known-projects)
 (global-set-key (kbd "s-f") 'helm-swoop)
@@ -33,6 +28,7 @@
 (global-set-key (kbd "s-p") 'previous-error)
 (global-set-key (kbd "s-n") 'next-error)
 (global-set-key (kbd "s-s") 'magit-status)
+(global-set-key (kbd "s-r") 'compile-or-recompile)
 
 (require 'tramp)
 (add-to-list 'tramp-remote-path "~/bin")

@@ -42,8 +42,7 @@
 (global-set-key "\C-\M-p" 'previous-error)
 (global-set-key "\C-\M-n" 'next-error)
 
-(global-set-key '[f5] 'compile)
-(global-set-key '[f7] 'recompile)
+(global-set-key '[f5] 'compile-or-recompile)
 
 (global-set-key "\M-s\M-l" 'sort-lines)
 
