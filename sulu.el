@@ -35,3 +35,6 @@
 (add-to-list 'tramp-remote-path "~/src/depot_tools")
 
 (add-hook 'c-mode-common-hook 'c-guess)
+
+;; idl-mode is for something completely different from WebIDL
+(add-to-list 'auto-mode-alist '("\\.idl\\'" . c-mode))
