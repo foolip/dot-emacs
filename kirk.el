@@ -1,9 +1,5 @@
 (setq load-path (cons "~/.elisp" load-path))
 
-(require 'find-things-fast)
-(global-set-key '[f1] 'ftf-find-file)
-(global-set-key '[f2] 'ftf-grepsource)
-
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (c-add-style "WebKit" '("Google"
