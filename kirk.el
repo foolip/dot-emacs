@@ -27,3 +27,6 @@
 (dir-locals-set-directory-class "~/src/opera/chromium/src/third_party/WebKit/" 'webkit-src)
 (dir-locals-set-directory-class "~/src/chromium/src/" 'google-src)
 (dir-locals-set-directory-class "~/src/chromium/src/third_party/WebKit/" 'webkit-src)
+
+(add-hook 'java-mode-hook (lambda ()
+			    (setq c-basic-offset 4)))
