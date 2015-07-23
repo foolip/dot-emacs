@@ -9,11 +9,9 @@
  '(fill-column 80)
  '(global-auto-revert-mode t)
  '(global-visual-line-mode nil)
- '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
  '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
  '(make-backup-files nil)
- '(minimap-window-location (quote right))
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(sgml-basic-offset 1)
@@ -22,7 +20,8 @@
  '(use-file-dialog nil)
  '(visible-bell t)
  '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
- '(which-function-mode t))
+ '(which-function-mode t)
+ '(x-select-enable-clipboard t))
 
 ;; http://stackoverflow.com/questions/9663396/how-do-i-make-emacs-recognize-bash-environment-variables-for-compilation
 (let ((path (shell-command-to-string "bash -l -c 'echo -n $PATH'")))
@@ -34,7 +33,6 @@
 
 ;; http://emacswiki.org/emacs/ELPA
 (require 'package)
-;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
@@ -78,11 +76,7 @@
 (setq projectile-enable-caching t)
 (global-set-key (kbd "s-o") 'helm-projectile-find-file)
 (global-set-key (kbd "s-O") 'helm-projectile-find-file-in-known-projects)
-
-
 (global-set-key (kbd "s-f") 'helm-swoop)
-
-;;(global-set-key (kbd "s-g") 'helm-ag)
 (global-set-key (kbd "s-g") 'helm-git-grep-at-point)
 
 (global-unset-key (kbd "s-q"))
@@ -111,16 +105,6 @@
 
 (add-hook 'c-mode-common-hook 'c-guess)
 
-;; http://stackoverflow.com/questions/8674912/how-to-collapse-whitespaces-in-a-region
-(defun just-one-space-in-region (beg end)
-  "replace all whitespace in the region with single spaces"
-  (interactive "r")
-  (save-excursion
-    (save-restriction
-      (narrow-to-region beg end)
-      (goto-char (point-min))
-      (while (re-search-forward "\\s-+" nil t)
-        (replace-match " ")))))
-
+;; load hostname.el, if it exists
 (let ((hostname (car (split-string system-name "\\."))))
      (load (concat "~/.emacs.d/" hostname ".el")))
