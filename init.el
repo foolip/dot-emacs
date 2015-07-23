@@ -6,19 +6,20 @@
  '(column-number-mode t)
  '(compilation-scroll-output (quote first-error))
  '(compile-command "cd ~/src/chromium/src/out/Debug; crbuild")
- '(custom-enabled-themes (quote (tango-dark)))
+ '(fill-column 80)
  '(global-auto-revert-mode t)
- '(global-font-lock-mode t nil (font-lock))
- '(ido-mode (quote buffer) nil (ido))
+ '(global-visual-line-mode nil)
+ '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
  '(make-backup-files nil)
- '(mouse-wheel-mode t nil (mwheel))
  '(scroll-bar-mode (quote right))
  '(sentence-end-double-space nil)
  '(sgml-basic-offset 1)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(use-file-dialog nil)
+ '(visible-bell t)
+ '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
  '(which-function-mode t)
  '(x-select-enable-clipboard t))
 
@@ -26,6 +27,11 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
+
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
+(add-to-list 'load-path "~/src/color-theme-sanityinc-tomorrow/")
+(add-to-list 'custom-theme-load-path "~/src/color-theme-sanityinc-tomorrow/")
+(load-theme 'sanityinc-tomorrow-night t)
 
 ;; http://tuhdo.github.io/helm-intro.html
 (require 'helm)
