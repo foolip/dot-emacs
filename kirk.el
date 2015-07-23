@@ -30,3 +30,22 @@
 
 (add-hook 'java-mode-hook (lambda ()
 			    (setq c-basic-offset 4)))
+
+(set-face-attribute 'default nil :height 110)
+
+(global-set-key "\M-g" 'goto-line)
+
+(setenv "PAGER" "/bin/cat")
+
+(global-set-key '[f3] 'vc-git-grep)
+(global-set-key "\C-\M-g" 'vc-git-grep)
+(global-set-key "\C-\M-p" 'previous-error)
+(global-set-key "\C-\M-n" 'next-error)
+
+(global-set-key '[f5] 'compile)
+(global-set-key '[f7] 'recompile)
+
+(global-set-key "\M-s\M-l" 'sort-lines)
+
+(add-hook 'c++-mode-hook 'flyspell-prog-mode)
+(add-hook 'c-mode-hook 'flyspell-prog-mode)

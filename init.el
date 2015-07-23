@@ -54,35 +54,13 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 (setq projectile-enable-caching t)
-;;(global-set-key (kbd "s-o") 'helm-projectile-find-file)
-;;(global-set-key (kbd "s-O") 'helm-projectile-find-file-in-known-projects)
-;;(global-set-key (kbd "s-f") 'helm-swoop)
-;;(global-set-key (kbd "s-g") 'helm-git-grep-at-point)
+
+(global-set-key (kbd "C-c o") 'ff-get-other-file)
 
 ;; http://www.emacswiki.org/emacs/DeletingWhitespace#toc3
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (fset 'yes-or-no-p 'y-or-n-p)
-
-(set-face-attribute 'default nil :height 110)
-
-(global-set-key "\M-g" 'goto-line)
-
-(setenv "PAGER" "/bin/cat")
-
-(global-set-key '[f3] 'vc-git-grep)
-(global-set-key "\C-\M-g" 'vc-git-grep)
-(global-set-key "\C-\M-p" 'previous-error)
-(global-set-key "\C-\M-n" 'next-error)
-(global-set-key (kbd "\C-c o") 'ff-find-other-file)
-
-(global-set-key '[f5] 'compile)
-(global-set-key '[f7] 'recompile)
-
-(global-set-key "\M-s\M-l" 'sort-lines)
-
-(add-hook 'c++-mode-hook 'flyspell-prog-mode)
-(add-hook 'c-mode-hook 'flyspell-prog-mode)
 
 (defun vc-git-annotate-command (file buf &optional rev)
   (let ((name (file-relative-name file)))
