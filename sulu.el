@@ -18,10 +18,12 @@
 (add-to-list 'default-frame-alist '(font . "Menlo-13"))
 (setq line-spacing 1)
 
+;; https://github.com/ShingoFukuyama/helm-swoop
+(package-install 'helm-swoop)
+(global-set-key (kbd "s-f") 'helm-swoop)
+
 (global-set-key (kbd "s-o") 'helm-projectile-find-file)
 (global-set-key (kbd "s-O") 'helm-projectile-find-file-in-known-projects)
-(global-set-key (kbd "s-f") 'helm-swoop)
-(global-set-key (kbd "s-g") 'helm-git-grep-at-point)
 
 (global-unset-key (kbd "s-q"))
 (global-set-key (kbd "s-g") 'vc-git-grep)

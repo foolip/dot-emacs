@@ -39,6 +39,7 @@
 (load-theme 'sanityinc-tomorrow-night t)
 
 ;; http://tuhdo.github.io/helm-intro.html
+(package-install 'helm)
 (require 'helm)
 (require 'helm-config)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
@@ -55,6 +56,8 @@
 (helm-mode 1)
 
 ;; http://tuhdo.github.io/helm-projectile.html
+(package-install 'projectile)
+(package-install 'helm-projectile)
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
