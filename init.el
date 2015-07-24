@@ -36,9 +36,10 @@
   (if (fboundp 'recompile) (recompile) (compile)))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
-(add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
-(load-theme 'sanityinc-tomorrow-night t)
+(let ((theme-path (concat user-emacs-directory "color-theme-sanityinc-tomorrow")))
+  (add-to-list 'load-path theme-path)
+  (add-to-list 'custom-theme-load-path theme-path)
+  (load-theme 'sanityinc-tomorrow-night t))
 
 ;; http://tuhdo.github.io/helm-intro.html
 (package-install 'helm)
@@ -78,4 +79,4 @@
 
 ;; load hostname.el, if it exists
 (let ((hostname (car (split-string system-name "\\."))))
-     (load (concat "~/.emacs.d/" hostname ".el")))
+     (load (concat user-emacs-directory hostname ".el")))
