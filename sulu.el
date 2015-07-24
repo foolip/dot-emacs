@@ -7,10 +7,10 @@
          exec-path)))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Size-and-Position.html
-(set-scroll-bar-mode nil)
 (when (window-system)
   (add-hook 'window-setup-hook
             (lambda ()
+              (set-scroll-bar-mode nil)
               (set-frame-position (selected-frame) 0 0)
               (set-frame-size (selected-frame) 1420 847 t))
             t))
