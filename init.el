@@ -12,6 +12,7 @@
  '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
  '(make-backup-files nil)
+ '(projectile-use-git-grep t)
  '(scroll-bar-mode (quote right))
  '(sentence-end-double-space nil)
  '(sgml-basic-offset 1)

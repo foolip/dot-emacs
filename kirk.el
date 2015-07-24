@@ -39,8 +39,7 @@
 
 (global-set-key "\C-\M-o" 'helm-projectile-find-file)
 
-(global-set-key '[f3] 'vc-git-grep)
-(global-set-key "\C-\M-g" 'vc-git-grep)
+(global-set-key (kbd "C-M-g") 'projectile-grep)
 (global-set-key "\C-\M-p" 'previous-error)
 (global-set-key "\C-\M-n" 'next-error)
 
