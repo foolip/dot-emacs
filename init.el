@@ -27,6 +27,8 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Compilation.html
 (defun compile-or-recompile ()
