@@ -1,8 +1,7 @@
 (toggle-frame-maximized)
 
-(setq load-path (cons "~/.elisp" load-path))
-
-(require 'google-c-style)
+;; https://code.google.com/p/chromium/wiki/Emacs
+(package-install 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (c-add-style "WebKit" '("Google"
                         (c-basic-offset . 4)
