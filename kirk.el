@@ -33,6 +33,10 @@
 
 (setenv "PAGER" "/bin/cat")
 
+;; https://github.com/ShingoFukuyama/helm-swoop
+(package-install 'helm-swoop)
+(global-set-key (kbd "C-M-f") 'helm-swoop)
+
 (global-set-key "\C-\M-o" 'helm-projectile-find-file)
 
 (global-set-key '[f3] 'vc-git-grep)
