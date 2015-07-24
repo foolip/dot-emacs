@@ -1,3 +1,5 @@
+(toggle-frame-maximized)
+
 (setq load-path (cons "~/.elisp" load-path))
 
 (require 'google-c-style)
