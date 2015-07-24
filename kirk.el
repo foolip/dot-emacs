@@ -1,3 +1,4 @@
+;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Window-Size-X.html
 (toggle-frame-maximized)
 
 ;; https://code.google.com/p/chromium/wiki/Emacs
@@ -27,8 +28,6 @@
 
 (add-hook 'java-mode-hook (lambda ()
 			    (setq c-basic-offset 4)))
-
-(set-face-attribute 'default nil :height 110)
 
 (global-set-key "\M-g" 'goto-line)
 
