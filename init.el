@@ -72,6 +72,10 @@
 ;; http://www.emacswiki.org/emacs/DeletingWhitespace#toc3
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; http://web-mode.org/
+(package-install 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (defun vc-git-annotate-command (file buf &optional rev)

@@ -1,6 +1,7 @@
 ;; http://stackoverflow.com/questions/9663396/how-do-i-make-emacs-recognize-bash-environment-variables-for-compilation
 (let ((path (shell-command-to-string "bash -l -c 'echo -n $PATH'")))
   (setenv "PATH" path)
+
   (setq exec-path
         (append
          (split-string-and-unquote path ":")
