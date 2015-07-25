@@ -69,6 +69,23 @@
 
 (global-set-key (kbd "C-c o") 'ff-get-other-file)
 
+;; https://code.google.com/p/chromium/wiki/Emacs
+(package-install 'google-c-style)
+(c-add-style "WebKit" '("Google"
+                        (c-basic-offset . 4)
+                        (c-offsets-alist . ((innamespace . 0)
+                                            (access-label . -)
+                                            (case-label . 0)
+                                            (member-init-intro . +)
+                                            (topmost-intro . 0)
+                                            (arglist-cont-nonempty . +)))))
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (google-set-c-style)
+            (when (and buffer-file-name
+                       (string-match "/WebKit/" buffer-file-name))
+              (c-set-style "WebKit"))))
+
 ;; http://www.emacswiki.org/emacs/DeletingWhitespace#toc3
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
