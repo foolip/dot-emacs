@@ -24,6 +24,7 @@
 
 (global-unset-key (kbd "s-q"))
 (global-set-key (kbd "s-g") 'projectile-grep)
+(global-set-key (kbd "s-G") 'vc-git-grep)
 (global-set-key (kbd "s-p") 'previous-error)
 (global-set-key (kbd "s-n") 'next-error)
 (global-set-key (kbd "s-s") 'magit-status)
