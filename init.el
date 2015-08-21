@@ -6,6 +6,7 @@
  '(column-number-mode t)
  '(compilation-scroll-output (quote first-error))
  '(compile-command "cd ~/src/chromium/src/out/Debug; crbuild")
+ '(ffap-machine-p-known (quote reject))
  '(fill-column 80)
  '(global-auto-revert-mode t)
  '(global-visual-line-mode nil)
