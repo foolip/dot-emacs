@@ -20,7 +20,6 @@
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(use-file-dialog nil)
- '(visible-bell t)
  '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
  '(which-function-mode t)
  '(x-select-enable-clipboard t))
