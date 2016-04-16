@@ -37,6 +37,7 @@
   (if (fboundp 'recompile) (recompile) (compile)))
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
+;; https://github.com/foolip/color-theme-sanityinc-tomorrow (base16 branch)
 (let ((theme-path (concat user-emacs-directory "color-theme-sanityinc-tomorrow")))
   (add-to-list 'load-path theme-path)
   (add-to-list 'custom-theme-load-path theme-path)
