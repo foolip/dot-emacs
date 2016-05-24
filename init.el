@@ -108,4 +108,4 @@
 
 ;; load hostname.el, if it exists
 (let ((hostname (car (split-string system-name "\\."))))
-     (load (concat user-emacs-directory hostname ".el")))
+     (load (concat user-emacs-directory hostname) t))
