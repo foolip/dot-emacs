@@ -14,14 +14,14 @@
  '(make-backup-files nil)
  '(projectile-use-git-grep t)
  '(scroll-bar-mode (quote right))
+ '(select-enable-clipboard t)
  '(sentence-end-double-space nil)
  '(sgml-basic-offset 1)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(use-file-dialog nil)
  '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
- '(which-function-mode t)
- '(x-select-enable-clipboard t))
+ '(which-function-mode t))
 
 ;; http://emacswiki.org/emacs/ELPA
 (require 'package)
