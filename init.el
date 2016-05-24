@@ -10,7 +10,6 @@
  '(fill-column 80)
  '(global-auto-revert-mode t)
  '(global-visual-line-mode nil)
- '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
  '(make-backup-files nil)
  '(projectile-use-git-grep t)
@@ -58,6 +57,7 @@
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (setq helm-split-window-in-side-p t)
+(setq helm-projectile-fuzzy-match nil)
 (helm-mode 1)
 
 ;; http://tuhdo.github.io/helm-projectile.html
