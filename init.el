@@ -34,6 +34,7 @@
 (defun compile-or-recompile ()
   (interactive)
   (if (fboundp 'recompile) (recompile) (compile)))
+(global-set-key (kbd "s-r") 'compile-or-recompile)
 
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html
 ;; https://github.com/foolip/color-theme-sanityinc-tomorrow (base16 branch)
@@ -60,6 +61,10 @@
 (setq helm-projectile-fuzzy-match nil)
 (helm-mode 1)
 
+;; https://github.com/ShingoFukuyama/helm-swoop
+(package-install 'helm-swoop)
+(global-set-key (kbd "s-f") 'helm-swoop)
+
 ;; http://tuhdo.github.io/helm-projectile.html
 (package-install 'projectile)
 (package-install 'helm-projectile)
@@ -69,6 +74,13 @@
 (setq projectile-enable-caching t)
 
 (global-set-key (kbd "C-c o") 'ff-get-other-file)
+(global-set-key (kbd "s-o") 'helm-projectile-find-file)
+(global-set-key (kbd "s-O") 'helm-projectile-find-file-in-known-projects)
+(global-set-key (kbd "s-g") 'projectile-grep)
+(global-set-key (kbd "s-G") 'vc-git-grep)
+(global-set-key (kbd "s-p") 'previous-error)
+(global-set-key (kbd "s-n") 'next-error)
+(global-unset-key (kbd "s-q"))
 
 ;; https://code.google.com/p/chromium/wiki/Emacs
 (package-install 'google-c-style)
