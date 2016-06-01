@@ -118,6 +118,5 @@
   (let ((name (file-relative-name file)))
     (vc-git-command buf 'async nil "blame" "--date=iso" rev "--" name)))
 
-;; load hostname.el, if it exists
-(let ((hostname (car (split-string system-name "\\."))))
-     (load (concat user-emacs-directory hostname) t))
+(if (eq system-type 'darwin)
+  (load (concat user-emacs-directory "mac")))

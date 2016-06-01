@@ -14,7 +14,3 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html
 (add-to-list 'default-frame-alist '(font . "Menlo-13"))
 (setq line-spacing 1)
-
-(require 'tramp)
-(add-to-list 'tramp-remote-path "~/bin")
-(add-to-list 'tramp-remote-path "~/src/depot_tools")
