@@ -73,6 +73,10 @@
 (helm-projectile-on)
 (setq projectile-enable-caching t)
 
+(global-set-key (kbd "s-x") 'clipboard-kill-region)
+(global-set-key (kbd "s-c") 'clipboard-kill-ring-save)
+(global-set-key (kbd "s-v") 'clipboard-yank)
+
 (global-set-key (kbd "C-c o") 'ff-get-other-file)
 (global-set-key (kbd "s-o") 'helm-projectile-find-file)
 (global-set-key (kbd "s-O") 'helm-projectile-find-file-in-known-projects)
