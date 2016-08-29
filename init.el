@@ -11,6 +11,7 @@
  '(global-auto-revert-mode t)
  '(global-visual-line-mode nil)
  '(indent-tabs-mode nil)
+ '(js-indent-level 2)
  '(make-backup-files nil)
  '(projectile-use-git-grep t)
  '(scroll-bar-mode (quote right))
