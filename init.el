@@ -110,5 +110,9 @@
   (let ((name (file-relative-name file)))
     (vc-git-command buf 'async nil "blame" "--date=iso" rev "--" name)))
 
+;; https://github.com/purcell/exec-path-from-shell
+(package-install 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
+
 (if (eq system-type 'darwin)
   (load (concat user-emacs-directory "mac")))
