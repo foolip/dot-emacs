@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(compilation-scroll-output (quote first-error))
- '(compile-command "cd ~/chromium/src/out/Debug; crbuild")
+ '(compile-command "cd ~/chromium/src/out/Default; crbuild")
  '(ffap-machine-p-known (quote reject))
  '(fill-column 80)
  '(global-auto-revert-mode t)
